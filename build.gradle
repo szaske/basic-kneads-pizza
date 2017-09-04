@@ -1,4 +1,9 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+//android {
+//    defaultConfig {
+//        minSdkVersion 21 //Added to remove warning on android:textAppearance="@android:style/TextAppearance.Material.Large"
+//    }
+//}
 
 buildscript {
     repositories {
