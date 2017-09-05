@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 String locationZipCode = mLocationEditText.getText().toString();
                 Log.d(TAG,"Zip code entered was: " + locationZipCode);
                 Intent intent = new Intent(MainActivity.this, RestaurantsActivity.class);
+                intent.putExtra("zipCode", locationZipCode);
                 startActivity(intent);
             }
         });
