@@ -7,14 +7,21 @@
     android:background="@color/colorIcons"
     tools:context="com.zaske.szaske.basic_kneads_pizza.MainActivity">
 
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
     <ImageView
         android:id="@+id/bgView"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/background"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteX="-47dp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -34,21 +41,31 @@
 
     <Button
         android:id="@+id/findRestaurantsButton"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:background="@color/colorAccent"
         android:text="Find Restaurants"
         android:textColor="@color/colorIcons"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/bgView"
-        android:layout_marginBottom="8dp" />
+        app:layout_constraintLeft_toLeftOf="@+id/guideline" />
 
+    <EditText
+        android:id="@+id/locationEditText"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Zip Code"
+        app:layout_constraintBottom_toBottomOf="@+id/bgView"
+        app:layout_constraintRight_toLeftOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/findRestaurantsButton" />
 
 
 </android.support.constraint.ConstraintLayout>
